@@ -6,6 +6,7 @@ from flask_wtf.csrf import CSRFProtect
 from flask_heroku import Heroku
 app = Flask( __name__ )
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SECRET_KEY'] = "Your_secret_string"
 heroku = Heroku(app)
 db = SQLAlchemy(app)
 csrf = CSRFProtect(app)
