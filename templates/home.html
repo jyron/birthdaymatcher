@@ -33,6 +33,7 @@
                         <h1 style=" color: rgb(255, 85, 85); "><b>Birthday Twin</b></h1>
             
                         <form action="{{ url_for('post_to_db') }}" method="POST">
+                            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
                             <h5>Birthday: </h5>
                             <input label = "Birthday" type = "date" name="birthday" required>
                             <br>
