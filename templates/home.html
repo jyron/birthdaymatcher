@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='mystyles2.css') }}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" />
+        
+
+        <title>Birthday Twins</title>
+    </head>
+    
+
+    <body id="clouds">
+        {% with messages = get_flashed_messages() %}
+        {% for message in messages %}
+        {{ message }}
+        {% endfor %}
+        {% endwith %}
+        <div class="cloud x1"></div>
+        <div class="cloud x3"></div>
+            <div class="container">
+                    
+                    <h1 class="text-left"><a href="{{ url_for('home') }}" style="text-decoration:none;"> Birthday Twins</a></h1>
+            
+                    <div class="jumbotron myborder text-center">
+                        <h1>Enter Your Birthday Here To Find Your</h1>
+                        <h1 style=" color: rgb(255, 85, 85); "><b>Birthday Twin</b></h1>
+            
+                        <form action="{{ url_for('post_to_db') }}" method="POST">
+                            <h5>Birthday: </h5>
+                            <input label = "Birthday" type = "date" name="birthday" required>
+                            <br>
+                            <h5>Name:</h5>
+                            <input type ='text' name='name'>
+                            
+                            
+                            <br>
+                            <h5>Email: </h5>
+                            <input label="E-mail" type = "email" name="email" autocomplete="off" required>
+                            <br>
+                            <input type="submit" value="Submit">
+                        </form>
+                        <div class="cloud x2"></div>
+                    <div class="cloud x4"></div>
+                    <div class="cloud x1"></div>
+            
+            
+                    </div>
+                
+        <div class="cloud x3"></div>
+        <div class="cloud x5"></div>
+                </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="
+                sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo "
+            crossorigin=" anonymous "></script>
+        <script src=" https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="
+                sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 "
+            crossorigin=" anonymous "></script>
+        <script src=" https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="
+                sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM "
+            crossorigin=" anonymous "></script>
+            <svg version="1.1" id="home-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1820 1080" style="enable-background:new 0 0 1820 1080;" xml:space="preserve">
+
+
+
+    </body>
+
+</html>
