@@ -22,7 +22,7 @@ def post_to_db():
     dbdata = User(request.form['name'], request.form['email'], request.form['birthday'])
     db.session.add(dbdata)
     db.session.commit()
-    return('Success!  We\'re searching for your twin now')
+    return 'Success!  We\'re searching for your twin now'
 
 @app.route("/")
 def home():
