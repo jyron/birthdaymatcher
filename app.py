@@ -20,7 +20,7 @@ class User(db.Model):
 
 @app.route("/Success", methods=["POST"])
 def post_to_db():
-    dbdata = User(request.form['name'], request.form['email'], request.form['birthday'])
+    dbdata = User(name = request.form['name'], email = request.form['email'], birthday = request.form['birthday'])
     db.session.add(dbdata)
     db.session.commit()
     return 'Success!  We\'re searching for your twin now'
